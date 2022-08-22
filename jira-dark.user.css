@@ -1,0 +1,48 @@
+/* ==UserStyle==
+@name           Jira Dark Theme
+@namespace      alex-way
+@author         alex-way
+@description    Dark theme for JIRA.`
+@version        1.0.0
+==/UserStyle== */
+
+@-moz-document domain("atlassian.net") {
+  html {
+    filter: invert(86%) hue-rotate(180deg) brightness(105%) contrast(105%);
+    background: #222;
+  }
+  body {
+    background: #222;
+  }
+  img,
+	svg,
+	iframe,
+	/*.emoji-common-emoji-sprite,
+	#profilecard-app span span,
+	[data-test-id="profilecard-next.ui.profilecard.profilecard-trigger"] span span,
+	header .atlaskit-portal span span,*/
+	.css-ob4lje,
+	.css-pxzk9z {
+    filter: invert(100%) hue-rotate(180deg) brightness(105%) contrast(105%);
+  }
+
+  /* Fix bug with white edges on sprint board */
+  #gh {
+    padding: 0 40px;
+  }
+  #content,
+  #com-atlassian-confluence > div:nth-child(3) > div:nth-child(2) {
+    margin: 0;
+    background: white;
+  }
+  /* Fix scroll background problems */
+  [data-testid="Content"] > div:first-child {
+    background: white;
+  }
+  [data-testid="app-navigation-custom-wordmark"] > img {
+    filter: brightness(105%) contrast(105%);
+  }
+  [role="banner"] a > img {
+    filter: invert(0%) hue-rotate(180deg) brightness(105%) contrast(105%);
+  }
+}
